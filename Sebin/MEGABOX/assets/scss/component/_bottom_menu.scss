@@ -33,3 +33,55 @@ article {
     }
   }
 }
+
+@media screen and (max-width: 820px){
+  article {
+    & .article-bottom {
+      width: 100%;
+  
+      & .bottom-item {
+        font-size: 14px;
+  
+        & a {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px){
+  article {
+    & .article-bottom {
+      display: block;
+      width: 100%;
+
+      padding: 10px 0px;
+
+      background-color: rgba(0,0,0,0.2);
+  
+      & .bottom-item {
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+  
+        user-select: none;
+
+        padding: 10px 0;
+        
+        &:not(:last-of-type) {
+          border-right: none;
+          border-bottom: 1px solid #423e3e85;
+        }
+  
+        & a {
+          margin-left: 4px;
+  
+          &:hover {
+            border-bottom: 1px solid #fff;
+          }
+        }
+      }
+    }
+  }
+}

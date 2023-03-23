@@ -188,3 +188,28 @@ article {
     }
   }
 }
+
+@media screen and (max-width: 820px){
+  article {
+    & .article-title {
+  
+      & .more {
+        right: 0px;
+  
+        font-size: 14px;
+      }
+    }
+  
+    & .article-list {
+      padding: 0;
+      overflow: auto;
+  
+      & .article-item {
+
+        &:not(:last-of-type) {
+          margin-right: 28px;
+        }
+      }
+    }
+  }
+}

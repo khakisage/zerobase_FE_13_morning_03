@@ -2,6 +2,7 @@ header {
   background-color: rgb(10, 11, 30);
   border-bottom: 1px solid rgba(255,255,255,.2);
   color: #fff;
+  width: 100%;
 
   & a {
     color: #fff;
@@ -22,6 +23,7 @@ header {
       grid-area: top-left;
       display: flex;
       align-items: center;
+
 
       & li {
         margin-right: 20px;
@@ -122,6 +124,127 @@ header {
         display: flex;
         align-items: center;
         width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px){
+	header {
+  
+    & nav {
+      grid-template-columns: 1fr 100px 1fr;
+      grid-row-gap: 15px;
+  
+      padding: 15px 0;
+  
+      & .top-left {
+  
+        & li {
+          font-size: 12px;
+        }
+      }
+  
+      & .logo-img {
+        & img {
+          width: 100px;
+        }
+      }
+  
+      & .top-right {
+  
+        & li {
+          font-size: 12px;
+        }
+      }
+  
+      & .bottom-left {
+        font-size: 14px;
+  
+        & .left-text ul li {
+          margin-left: 24px;
+        }
+      }
+  
+      & .bottom-right { 
+        font-size: 14px;
+  
+        & .right-text ul li {
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px){
+  header {
+  
+    & nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: 
+      "logo-img logo-img"
+      "top-right top-right"
+      "bottom-left bottom-right";
+      grid-row-gap: 18px;
+  
+      padding: 15px 0;
+
+      & .top-left {
+        display: none;
+      }
+  
+      & .logo-img {
+        width: 100px;
+        align-self: center;
+        text-align: center;
+      }
+  
+      & .top-right {
+        justify-content: center;
+  
+        & li {
+          font-size: 12px;
+  
+          &:not(:last-of-type) {
+           margin-right: 12px; 
+          }
+        }
+      }
+  
+      & .bottom-left {
+        justify-content: center;
+        width: 50%;
+  
+        font-size: 12px;
+  
+        & .left-ico a {
+          margin-right: 8px;
+        }
+  
+        & .left-text ul li {
+          display: none;
+        }
+      }
+  
+      & .bottom-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        margin-left: 0;
+  
+        font-size: 12px;
+  
+        & .right-ico a {
+          margin-left: 8px;
+        }
+  
+        & .right-text ul li {
+          display: none;
+        }
       }
     }
   }
