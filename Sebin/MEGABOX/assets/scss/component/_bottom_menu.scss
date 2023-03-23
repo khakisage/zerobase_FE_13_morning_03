@@ -1,0 +1,35 @@
+article {
+  & .article-bottom {
+    display: flex;
+    align-items: center;
+    width: calc(100% - calc(20px * 2));
+    margin: 28px auto;
+    padding: 20px 0;
+
+    background-color: rgba(0,0,0,0.2);
+
+    & .bottom-item {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 300;
+      flex: 1;
+      text-align: center;
+
+      user-select: none;
+
+      &:not(:last-of-type) {
+        border-right: 1px solid #423e3e;
+      }
+
+      & a {
+        margin-left: 10px;
+
+        color: #fff;
+
+        &:hover {
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+  }
+}
