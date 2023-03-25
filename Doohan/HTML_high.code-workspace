@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../HTML_high"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HTML_high"
+	}
+}
